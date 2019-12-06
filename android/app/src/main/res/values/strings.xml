@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">idealily</string>
+    <string name="default_notification_channel_id">idealily_notification</string>
+</resources>

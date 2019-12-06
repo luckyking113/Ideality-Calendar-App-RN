@@ -1,0 +1,72 @@
+keytool -list -v -keystore "signature/idealily.jsk" -alias "key0"
+calendar apis
+https://developers.google.com/calendar/concepts
+
+IDEA LILY APIS USAGE
+Note: use "email_id|resource_id" in place of email id parameters below. 
+If email_id is unknown use "EML_UNK" in its place. 
+If resource_id is unknown use "RES_UNK" in its place.
+In some POST functions you have to pass in name-value pairs in the body not in the parameters. Check existing code for that.
+--------------------------------------------------
+
+Example url's:
+http://54.193.69.187:8000/get_timesforids_dbx?user_ids=14
+http://54.193.69.187:8000/get_timesforemails_dbx?emails='test@gmail.com'|'ameldiga.jonesdtest@gmail.com'
+http://54.193.69.187:8000/get_userids_dbx?emails='test@gmail.com','ameldiga.jonesdtest@gmail.com'
+
+
+init_user_dbx():
+Input Parameter: test2@gmail.com
+Running init_user_dbx(): 
+Output Obtained: None
+
+
+set_timeslots_dbx():
+Input Parameter: test1@gmail.com , 1 , 2019-09-17 , 11:00
+Running set_timeslots_dbx(): 
+Output Obtained: None
+
+
+get_timesforids_dbx():
+Input Parameter: 1|2|3|4 , 2019-09-17
+Running get_timesforids_dbx(): 
+length is 4
+Output Obtained: ((datetime.date(2019, 9, 17), datetime.timedelta(0, 28800), 1, 'ameldiga.jonesdtest@gmail.com', 'Unknown', 2, 'alexis.wilsondtest@gmail.com', 'Unknown', 3, 'christina.apatowdtest@gmail.com', 'Unknown', 4, 'henry.pauldtest@gmail.com', 'Unknown'), (datetime.date(2019, 9, 17), datetime.timedelta(0, 30600), 1, 'ameldiga.jonesdtest@gmail.com', 'Unknown', 2, 'alexis.wilsondtest@gmail.com', 'Unknown', 3, 'christina.apatowdtest@gmail.com', 'Unknown', 4, 'henry.pauldtest@gmail.com', 'Unknown'), (datetime.date(2019, 9, 17), datetime.timedelta(0, 32400), 1, 'ameldiga.jonesdtest@gmail.com', 'Unknown', 2, 'alexis.wilsondtest@gmail.com', 'Unknown', 3, 'christina.apatowdtest@gmail.com', 'Unknown', 4, 'henry.pauldtest@gmail.com', 'Unknown'), (datetime.date(2019, 9, 17), datetime.timedelta(0, 34200), 1, 'ameldiga.jonesdtest@gmail.com', 'Unknown', 2, 'alexis.wilsondtest@gmail.com', 'Unknown', 3, 'christina.apatowdtest@gmail.com', 'Unknown', 4, 'henry.pauldtest@gmail.com', 'Unknown'), (datetime.date(2019, 9, 17), datetime.timedelta(0, 36000), 1, 'ameldiga.jonesdtest@gmail.com', 'Unknown', 2, 'alexis.wilsondtest@gmail.com', 'Unknown', 3, 'christina.apatowdtest@gmail.com', 'Unknown', 4, 'henry.pauldtest@gmail.com', 'Unknown'), (datetime.date(2019, 9, 17), datetime.timedelta(0, 37800), 1, 'ameldiga.jonesdtest@gmail.com', 'Unknown', 2, 'alexis.wilsondtest@gmail.com', 'Unknown', 3, 'christina.apatowdtest@gmail.com', 'Unknown', 4, 'henry.pauldtest@gmail.com', 'Unknown'), (datetime.date(2019, 9, 17), datetime.timedelta(0, 39600), 1, 'ameldiga.jonesdtest@gmail.com', 'Unknown', 2, 'alexis.wilsondtest@gmail.com', 'Unknown', 3, 'christina.apatowdtest@gmail.com', 'Unknown', 4, 'henry.pauldtest@gmail.com', 'Unknown'), (datetime.date(2019, 9, 17), datetime.timedelta(0, 41400), 1, 'ameldiga.jonesdtest@gmail.com', 'Unknown', 2, 'alexis.wilsondtest@gmail.com', 'Unknown', 3, 'christina.apatowdtest@gmail.com', 'Unknown', 4, 'henry.pauldtest@gmail.com', 'Unknown'), (datetime.date(2019, 9, 17), datetime.timedelta(0, 43200), 1, 'ameldiga.jonesdtest@gmail.com', 'Unknown', 2, 'alexis.wilsondtest@gmail.com', 'Unknown', 3, 'christina.apatowdtest@gmail.com', 'Unknown', 4, 'henry.pauldtest@gmail.com', 'Unknown'), (datetime.date(2019, 9, 17), datetime.timedelta(0, 45000), 1, 'ameldiga.jonesdtest@gmail.com', 'Unknown', 2, 'alexis.wilsondtest@gmail.com', 'Unknown', 3, 'christina.apatowdtest@gmail.com', 'Unknown', 4, 'henry.pauldtest@gmail.com', 'Unknown'), (datetime.date(2019, 9, 17), datetime.timedelta(0, 46800), 1, 'ameldiga.jonesdtest@gmail.com', 'Unknown', 2, 'alexis.wilsondtest@gmail.com', 'Unknown', 3, 'christina.apatowdtest@gmail.com', 'Unknown', 4, 'henry.pauldtest@gmail.com', 'Unknown'), (datetime.date(2019, 9, 17), datetime.timedelta(0, 48600), 1, 'ameldiga.jonesdtest@gmail.com', 'Unknown', 2, 'alexis.wilsondtest@gmail.com', 'Unknown', 3, 'christina.apatowdtest@gmail.com', 'Unknown', 4, 'henry.pauldtest@gmail.com', 'Unknown'), (datetime.date(2019, 9, 17), datetime.timedelta(0, 50400), 1, 'ameldiga.jonesdtest@gmail.com', 'Unknown', 2, 'alexis.wilsondtest@gmail.com', 'Unknown', 3, 'christina.apatowdtest@gmail.com', 'Unknown', 4, 'henry.pauldtest@gmail.com', 'Unknown'), (datetime.date(2019, 9, 17), datetime.timedelta(0, 52200), 1, 'ameldiga.jonesdtest@gmail.com', 'Unknown', 2, 'alexis.wilsondtest@gmail.com', 'Unknown', 3, 'christina.apatowdtest@gmail.com', 'Unknown', 4, 'henry.pauldtest@gmail.com', 'Unknown'), (datetime.date(2019, 9, 17), datetime.timedelta(0, 54000), 1, 'ameldiga.jonesdtest@gmail.com', 'Unknown', 2, 'alexis.wilsondtest@gmail.com', 'Unknown', 3, 'christina.apatowdtest@gmail.com', 'Unknown', 4, 'henry.pauldtest@gmail.com', 'Unknown'), (datetime.date(2019, 9, 17), datetime.timedelta(0, 55800), 1, 'ameldiga.jonesdtest@gmail.com', 'Unknown', 2, 'alexis.wilsondtest@gmail.com', 'Unknown', 3, 'christina.apatowdtest@gmail.com', 'Unknown', 4, 'henry.pauldtest@gmail.com', 'Unknown'), (datetime.date(2019, 9, 17), datetime.timedelta(0, 57600), 1, 'ameldiga.jonesdtest@gmail.com', 'Unknown', 2, 'alexis.wilsondtest@gmail.com', 'Unknown', 3, 'christina.apatowdtest@gmail.com', 'Unknown', 4, 'henry.pauldtest@gmail.com', 'Unknown'), (datetime.date(2019, 9, 17), datetime.timedelta(0, 59400), 1, 'ameldiga.jonesdtest@gmail.com', 'Unknown', 2, 'alexis.wilsondtest@gmail.com', 'Unknown', 3, 'christina.apatowdtest@gmail.com', 'Unknown', 4, 'henry.pauldtest@gmail.com', 'Unknown'), (datetime.date(2019, 9, 17), datetime.timedelta(0, 61200), 1, 'ameldiga.jonesdtest@gmail.com', 'Unknown', 2, 'alexis.wilsondtest@gmail.com', 'Unknown', 3, 'christina.apatowdtest@gmail.com', 'Unknown', 4, 'henry.pauldtest@gmail.com', 'Unknown'), (datetime.date(2019, 9, 17), datetime.timedelta(0, 63000), 1, 'ameldiga.jonesdtest@gmail.com', 'Unknown', 2, 'alexis.wilsondtest@gmail.com', 'Unknown', 3, 'christina.apatowdtest@gmail.com', 'Unknown', 4, 'henry.pauldtest@gmail.com', 'Unknown'), (datetime.date(2019, 9, 17), datetime.timedelta(0, 64800), 1, 'ameldiga.jonesdtest@gmail.com', 'Unknown', 2, 'alexis.wilsondtest@gmail.com', 'Unknown', 3, 'christina.apatowdtest@gmail.com', 'Unknown', 4, 'henry.pauldtest@gmail.com', 'Unknown'))
+
+
+get_timesforemails_dbx():
+Input Parameter: 'test@gmail.com'|'ameldiga.jonesdtest@gmail.com' , 2019-09-17
+Running get_timesforemails_dbx(): 
+length is 2
+Output Obtained: ((datetime.date(2019, 9, 17), datetime.timedelta(0, 28800), 12, 'test@gmail.com', 'Unknown', 1, 'ameldiga.jonesdtest@gmail.com', 'Unknown'), (datetime.date(2019, 9, 17), datetime.timedelta(0, 30600), 12, 'test@gmail.com', 'Unknown', 1, 'ameldiga.jonesdtest@gmail.com', 'Unknown'), (datetime.date(2019, 9, 17), datetime.timedelta(0, 32400), 12, 'test@gmail.com', 'Unknown', 1, 'ameldiga.jonesdtest@gmail.com', 'Unknown'), (datetime.date(2019, 9, 17), datetime.timedelta(0, 34200), 12, 'test@gmail.com', 'Unknown', 1, 'ameldiga.jonesdtest@gmail.com', 'Unknown'), (datetime.date(2019, 9, 17), datetime.timedelta(0, 36000), 12, 'test@gmail.com', 'Unknown', 1, 'ameldiga.jonesdtest@gmail.com', 'Unknown'), (datetime.date(2019, 9, 17), datetime.timedelta(0, 37800), 12, 'test@gmail.com', 'Unknown', 1, 'ameldiga.jonesdtest@gmail.com', 'Unknown'), (datetime.date(2019, 9, 17), datetime.timedelta(0, 39600), 12, 'test@gmail.com', 'Unknown', 1, 'ameldiga.jonesdtest@gmail.com', 'Unknown'), (datetime.date(2019, 9, 17), datetime.timedelta(0, 41400), 12, 'test@gmail.com', 'Unknown', 1, 'ameldiga.jonesdtest@gmail.com', 'Unknown'), (datetime.date(2019, 9, 17), datetime.timedelta(0, 43200), 12, 'test@gmail.com', 'Unknown', 1, 'ameldiga.jonesdtest@gmail.com', 'Unknown'), (datetime.date(2019, 9, 17), datetime.timedelta(0, 45000), 12, 'test@gmail.com', 'Unknown', 1, 'ameldiga.jonesdtest@gmail.com', 'Unknown'), (datetime.date(2019, 9, 17), datetime.timedelta(0, 46800), 12, 'test@gmail.com', 'Unknown', 1, 'ameldiga.jonesdtest@gmail.com', 'Unknown'), (datetime.date(2019, 9, 17), datetime.timedelta(0, 48600), 12, 'test@gmail.com', 'Unknown', 1, 'ameldiga.jonesdtest@gmail.com', 'Unknown'), (datetime.date(2019, 9, 17), datetime.timedelta(0, 50400), 12, 'test@gmail.com', 'Unknown', 1, 'ameldiga.jonesdtest@gmail.com', 'Unknown'), (datetime.date(2019, 9, 17), datetime.timedelta(0, 52200), 12, 'test@gmail.com', 'Unknown', 1, 'ameldiga.jonesdtest@gmail.com', 'Unknown'), (datetime.date(2019, 9, 17), datetime.timedelta(0, 54000), 12, 'test@gmail.com', 'Unknown', 1, 'ameldiga.jonesdtest@gmail.com', 'Unknown'), (datetime.date(2019, 9, 17), datetime.timedelta(0, 55800), 12, 'test@gmail.com', 'Unknown', 1, 'ameldiga.jonesdtest@gmail.com', 'Unknown'), (datetime.date(2019, 9, 17), datetime.timedelta(0, 57600), 12, 'test@gmail.com', 'Unknown', 1, 'ameldiga.jonesdtest@gmail.com', 'Unknown'), (datetime.date(2019, 9, 17), datetime.timedelta(0, 59400), 12, 'test@gmail.com', 'Unknown', 1, 'ameldiga.jonesdtest@gmail.com', 'Unknown'), (datetime.date(2019, 9, 17), datetime.timedelta(0, 61200), 12, 'test@gmail.com', 'Unknown', 1, 'ameldiga.jonesdtest@gmail.com', 'Unknown'), (datetime.date(2019, 9, 17), datetime.timedelta(0, 63000), 12, 'test@gmail.com', 'Unknown', 1, 'ameldiga.jonesdtest@gmail.com', 'Unknown'), (datetime.date(2019, 9, 17), datetime.timedelta(0, 64800), 12, 'test@gmail.com', 'Unknown', 1, 'ameldiga.jonesdtest@gmail.com', 'Unknown'))
+
+
+set_resource_dbx():
+Input Parameter: 6 , 0
+Running set_resource_dbx(): 
+Output Obtained: 
+
+
+get_isreschanged_dbx():
+Input Parameter: 6
+Running get_isreschanged_dbx(): 
+Output Obtained: 0
+
+
+get_userids_dbx():
+Input Parameter: test@gmail.com|ameldiga.jonesdtest@gmail.com
+Running get_userids_dbx(): 
+Output Obtained: ((1, 'ameldiga.jonesdtest@gmail.com'), (12, 'test@gmail.com'))
+
+
+get_useremails_dbx():
+Input Parameter: 1|4
+Running get_useremails_dbx(): 
+Output Obtained: ((1, 'ameldiga.jonesdtest@gmail.com'), (4, 'henry.pauldtest@gmail.com'))
+
+modification in app
+
+1. timezone list (IST,cst,pst,est default(pst))
+2. time slots in call notes
+3. prefilled email id in participants if exists in callee.
+4. fill agenda mobile number from callee
